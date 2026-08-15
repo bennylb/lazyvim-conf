@@ -1,0 +1,30 @@
+-- Autocmds are automatically loaded on the VeryLazy event
+-- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
+-- Add any additional autocmds here
+
+-- -- Auto-reload files changed by external tools (like Claude Code)
+-- vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+--   group = vim.api.nvim_create_augroup("auto_read", {}),
+--   pattern = "*",
+--   callback = function()
+--     if vim.fn.mode() ~= "c" then
+--       vim.cmd("checktime")
+--     end
+--   end,
+-- })
+--
+-- -- Handle external file changes without prompting
+-- vim.api.nvim_create_autocmd("FileChangedShell", {
+--   group = vim.api.nvim_create_augroup("external_changes", {}),
+--   pattern = "*",
+--   callback = function()
+--     -- Auto-reload if no local changes, otherwise let user decide
+--     if vim.bo.modified then
+--       vim.notify("File changed externally but has local changes", vim.log.levels.WARN)
+--     else
+--       vim.cmd("checktime")
+--       -- Save other modified buffers after reloading
+--       vim.cmd("silent! wall")
+--     end
+--   end,
+-- })
