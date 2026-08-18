@@ -8,9 +8,9 @@ return {
       -- colorscheme = "tokyonight-night",
       -- colorscheme = "catppuccin-mocha",
       colorscheme = ({
-        mbp = "tokyonight",
+        mbp = "tokyonight-moon",
         ["rasppi4-1"] = "carbonfox",
-      })[vim.fn.hostname()] or "tokyonight",
+      })[vim.fn.hostname()] or "tokyonight-moon",
     },
   },
   {
