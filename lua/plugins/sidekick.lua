@@ -44,7 +44,9 @@ return {
         win = {
           layout = "right",
           -- default split width is 80; make it wider
-          width = 200,
+          split = {
+            width = 110,
+          },
           keys = {
             buffers = { "<c-b>", "buffers", mode = "n", desc = "open buffer picker" },
             files = { "<c-f>", "files", mode = "n", desc = "open file picker" },
