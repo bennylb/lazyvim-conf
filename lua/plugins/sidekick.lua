@@ -3,7 +3,8 @@ local host = require("util.host")
 return {
 {
     "folke/sidekick.nvim",
-    enabled = host { "mbp", "rasppi4-1", },
+    -- enabled = host { "mbp", "rasppi4-1", },
+    enabled = false,
     opts = {
       nes = { enabled = false },
       -- copilot = { status = { enabled = false } },
